@@ -1,3 +1,36 @@
+export const features = [
+  {
+    id: "success",
+    title: "Long-Term success and stability",
+    image: "/images/features/Money-Bag.png"
+  },
+  {
+    id: "exchange",
+    title: "Digital cultural exchange",
+    image: "/images/features/drama-masks.png"
+  },
+  {
+    id: "artists",
+    title: "Empowering Artists",
+    image: "/images/features/chase.png"
+  },
+  {
+    id: "community",
+    title: "Fostering a global community",
+    image: "/images/features/add.png"
+  },
+  {
+    id: "preservation",
+    title: "Preservation of cultural art",
+    image: "/images/features/stars.png"
+  },
+  {
+    id: "democratizing",
+    title: "Democratizing art globally",
+    image: "/images/features/magic-wond.png"
+  }
+];
+
 export const navLinks = [
     {
       id: "home",
