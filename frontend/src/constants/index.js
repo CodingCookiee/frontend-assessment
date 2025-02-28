@@ -47,6 +47,55 @@ export const popularNFTs = {
   ]
 };
 
+export const roadmapPhases = [
+  {
+    id: "phase1",
+    title: "Phase-I",
+    image: "/images/phase/phase-1.png",
+    list: [
+      "Goal Defining",
+      "Market Research",
+      "Whitepaper v1",
+      "Initial Funding Secured"
+    ]
+  },
+  {
+    id: "phase2",
+    title: "Phase-II",
+    image: "/images/phase/phase-2.png",
+    list: [
+      "AI Generative System Development",
+      "Early AI Generative System Testing",
+      "Preparing for NFT Mask Collection Launch",
+      "Website launch V1",
+      "Whitelisting"
+    ]
+  },
+  {
+    id: "phase3",
+    title: "Phase-III",
+    image: "/images/phase/phase-3.png",
+    list: [
+      "NFT Minting",
+      "3dotlink NFT Collection Launch",
+      "Active Marketing Campaigns",
+      "Community Engagement Initiatives",
+      "3dotlink Marketplace Launch"
+    ]
+  },
+  {
+    id: "phase4",
+    title: "Phase-IV",
+    image: "/images/phase/phase.png",
+    list: [
+      "Collaborations & Partnerships",
+      "Enhanced AI Generative System",
+      "Global Outreach Marketing",
+      "Staking"
+    ]
+  }
+];
+
 export const navLinks = [
   {
     id: "home",
