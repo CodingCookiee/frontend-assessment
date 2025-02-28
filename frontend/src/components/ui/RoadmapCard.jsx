@@ -12,7 +12,7 @@ const RoadmapCard = ({ phase, title, list, image, isImageRight }) => {
       transition={{ duration: 0.5 }}
       className="flex flex-col gap-6 w-full !mb-24"
     >
-      <div className={`w-[70%] ${isImageRight ? '' : 'ml-auto'}`} style={{ backgroundColor: "#5C071E" }}>
+      <div className={`w-[70%] ${!isImageRight ? '!ml-auto' : ''}`} style={{ backgroundColor: "#5C071E" }}>
   <Text 
     as="h3"
     className="!mt-2.5 !mb-2.5 !text-[#FD1640] !text-2xl !py-4 !px-12 font-['Zen_Dots']"
@@ -20,6 +20,7 @@ const RoadmapCard = ({ phase, title, list, image, isImageRight }) => {
     {title}
   </Text>
 </div>
+
 
       <div
         className={`flex ${
@@ -44,7 +45,7 @@ const RoadmapCard = ({ phase, title, list, image, isImageRight }) => {
           <img 
             src={image} 
             alt={`Phase ${phase}`} 
-            className="w-[80%] absolute !-bottom-20 bg-transparent" 
+            className="w-[300px] absolute !-bottom-20 bg-transparent" 
           />
         </div>
       </div>
