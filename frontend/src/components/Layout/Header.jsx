@@ -176,7 +176,7 @@ const Header = () => {
         {/* Mobile Navigation Menu */}
         <div
           ref={mobileMenuRef}
-          className="xl:hidden overflow-hidden bg-black/50 backdrop-blur-lg "
+          className="z-100 xl:hidden overflow-hidden bg-black/50 backdrop-blur-lg "
         >
           <div className="px-6 !py-10 flex flex-col items-center">
             <div className="w-full max-w-md space-y-8">

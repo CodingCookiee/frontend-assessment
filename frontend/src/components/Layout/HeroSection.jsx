@@ -24,7 +24,7 @@ const HeroSection = () => {
             </div>
 
             {/* Content Layer */}
-            <div className=" relative z-50 !ml-8 container mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
+            <div className=" relative z-20 !ml-8 container mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
                 <div className="flex flex-col gap-4 max-w-[600px]">
                     <Text 
                         as="h1" 
