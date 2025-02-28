@@ -27,7 +27,7 @@ const FAQ = () => {
     ];
 
     return (
-        <section className="w-full py-24 relative overflow-hidden">
+        <section className="w-full py-24 relative overflow-hidden !mt-12">
             <div className="container !mx-auto !pl-4 !lg:pl-6">
                 <div className="flex flex-col lg:flex-row items-center gap-16 relative">
                     {/* Left Section - Questions */}
