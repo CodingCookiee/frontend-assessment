@@ -27,7 +27,7 @@ const RoadMap = () => {
                 </Text>
             </motion.div>
 
-            <div className="relative max-w-7xl mx-auto px-4">
+            <div className="relative max-w-7xl !mx-auto px-4">
                 <div 
                     className="absolute left-8 top-0 bottom-0 w-px border-l-2 border-dashed"
                     style={{ borderColor: '#FD1640' }}
