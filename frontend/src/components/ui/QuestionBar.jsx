@@ -9,7 +9,7 @@ const QuestionBar = ({ question, answer }) => {
         <div className="w-full">
             <motion.div
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full cursor-pointer rounded-sm !py-6 !px-6 !mt-2.5 !mb-5"
+                className="w-[95%] lg:w-full xl:w-full  cursor-pointer rounded-sm !py-6 !px-6 !mt-2.5 !mb-5"
                 style={{ backgroundColor: '#5C071E' }}
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.2 }}
