@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, FeaturesGrid, HeroSection, PopularNFTs, RoadMap, FAQ } from '../components/Layout';
+import { Header, FeaturesGrid, HeroSection, PopularNFTs, RoadMap, FAQ, SectionBreak } from '../components/Layout';
 
 const HomePage = () => {
     return (
@@ -8,6 +8,7 @@ const HomePage = () => {
             <div className="pt-24">
                 <HeroSection />
                 <FeaturesGrid />
+                <SectionBreak />
                 <PopularNFTs />
                 <RoadMap />
                 <FAQ />
