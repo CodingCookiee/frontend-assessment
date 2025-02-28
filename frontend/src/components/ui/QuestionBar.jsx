@@ -16,7 +16,7 @@ const QuestionBar = ({ question, answer }) => {
             >
                 <div className="flex justify-between items-center">
                     <h3 
-                        className="!font-inter text-lg"
+                        className="!font-[Zen_Dots] text-lg"
                         style={{ color: isOpen ? '#FD1640' : 'white' }}
                     >
                         {question}

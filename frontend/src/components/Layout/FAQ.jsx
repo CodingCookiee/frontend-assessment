@@ -28,7 +28,7 @@ const FAQ = () => {
 
     return (
         <section className="w-full py-24 relative overflow-hidden">
-            <div className="container mx-auto px-4 lg:px-6">
+            <div className="container !mx-auto !pl-4 !lg:pl-6">
                 <div className="flex flex-col lg:flex-row items-center gap-16 relative">
                     {/* Left Section - Questions */}
                     <div className="w-full lg:w-1/2 z-10">
@@ -43,7 +43,7 @@ const FAQ = () => {
                         </div>
 
                         {/* Tabs */}
-                        <div className="flex flex-wrap gap-6 md:gap-8 mb-8">
+                        <div className="flex flex-wrap gap-6 md:gap-8 !mb-8">
                             {tabs.map((tab) => (
                                 <button
                                     key={tab}
@@ -76,12 +76,12 @@ const FAQ = () => {
                     </div>
 
                     {/* Right Section - Image */}
-                    <div className="w-full lg:w-1/2 lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:h-full">
+                    <div className="w-full  lg:absolute lg:right-0 lg:top-0 lg:bottom-0 ">
                         <div className="relative w-full h-full">
                             <img 
                                 src="/images/popular/faq-image.png" 
                                 alt="FAQ Illustration" 
-                                className="w-full h-full object-cover lg:object-contain lg:scale-125 lg:origin-left"
+                                className="w-full h-full !object-cover  lg:origin-left"
                             />
                             {/* Gradient overlay for better text readability on mobile */}
                             <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent lg:hidden" />
