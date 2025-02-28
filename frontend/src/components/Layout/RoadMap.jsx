@@ -1,19 +1,29 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { roadmapPhases } from '../../constants';
 import RoadmapCard from '../ui/RoadmapCard';
 
 const RoadMap = () => {
     return (
-        <section className="w-full py-16">
+        <section className="w-full py-16 mt-32">
             {/* Title and Subtitle */}
-            <div className="text-center mb-16">
-                <h2 className="text-5xl font-bold mb-4" style={{ color: '#FD1640' }}>
+            <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-center mb-16"
+            >
+                <h2 
+                    className="text-5xl mb-4 font-['ZenDots']" 
+                    style={{ color: '#FD1640' }}
+                >
                     Roadmap
                 </h2>
                 <p className="text-xl text-gray-300">
                     Guiding the fusion of culture, AI, and Web3 innovation
                 </p>
-            </div>
+            </motion.div>
 
             {/* Timeline Container */}
             <div className="relative max-w-7xl mx-auto px-4">
@@ -28,7 +38,11 @@ const RoadMap = () => {
                     {roadmapPhases.map((phase, index) => (
                         <div key={phase.id} className="relative">
                             {/* Timeline Circle */}
-                            <div 
+                            <motion.div 
+                                initial={{ scale: 0 }}
+                                whileInView={{ scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.3, delay: 0.2 }}
                                 className="absolute left-8 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-2"
                                 style={{ borderColor: '#FD1640' }}
                             />

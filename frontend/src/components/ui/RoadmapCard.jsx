@@ -1,27 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 
 const RoadmapCard = ({ phase, title, list, image, isImageRight }) => {
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <motion.div 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col gap-6 w-full"
+    >
       {/* Title with lighter background */}
       <div 
-        className="px-6 py-3 rounded-lg w-fit"
-        style={{ backgroundColor: '#FE4D6D' }} // Lighter version of FD1640
+        className="w-full"
+        style={{ backgroundColor: '#FE4D6D' }}
       >
-        <h3 className="text-white text-2xl font-bold">{title}</h3>
+        <h3 className="text-white text-2xl !py-4 px-8 font-['Zen_Dots']">{title}</h3>
       </div>
 
-      {/* Content container */}
-      <div className={`flex ${isImageRight ? 'flex-row' : 'flex-row-reverse'} items-center gap-8`}>
+      {/* Content container with shared background */}
+      <div 
+        className={`flex ${isImageRight ? 'flex-row' : 'flex-row-reverse'} items-center gap-8 p-8 rounded-lg`}
+        style={{ backgroundColor: '#FD1640' }}
+      >
         {/* List container */}
         <div className="flex-1">
-          <ul className="space-y-3">
+          <ul className="space-y-4">
             {list.map((item, index) => (
               <li 
                 key={index}
-                className="px-6 py-3 rounded-lg text-white"
-                style={{ backgroundColor: '#FD1640' }}
+                className="text-white text-lg"
               >
                 {item}
               </li>
@@ -29,17 +38,16 @@ const RoadmapCard = ({ phase, title, list, image, isImageRight }) => {
           </ul>
         </div>
 
-        {/* Image container with overflow effect */}
-        <div className="flex-1 relative">
-          <div className="absolute inset-0 bg-[#FD1640] rounded-lg transform scale-95" />
+        {/* Image container */}
+        <div className="flex-1">
           <img 
             src={image} 
             alt={`Phase ${phase}`}
-            className="relative z-10 w-full h-auto transform scale-110"
+            className="w-full h-auto"
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
