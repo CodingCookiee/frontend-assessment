@@ -48,7 +48,7 @@ const RoadMap = () => {
                             />
                             
                             {/* Phase Card */}
-                            <div className="ml-16">
+                            <div className="!ml-16">
                                 <RoadmapCard
                                     phase={index + 1}
                                     title={phase.title}

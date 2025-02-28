@@ -13,10 +13,10 @@ const RoadmapCard = ({ phase, title, list, image, isImageRight }) => {
     >
       {/* Title with lighter background */}
       <div 
-        className="w-full"
-        style={{ backgroundColor: '#FE4D6D' }}
+        className="w-[70%]"
+        style={{ backgroundColor: '#5C071E' }}
       >
-        <h3 className="text-white text-2xl !py-4 px-8 font-['Zen_Dots']">{title}</h3>
+        <h3 className="!mt-2.5 !mb-2.5 text-[#FD1640] text-2xl !py-4 px-8 font-['Zen_Dots']">{title}</h3>
       </div>
 
       {/* Content container with shared background */}
@@ -43,7 +43,7 @@ const RoadmapCard = ({ phase, title, list, image, isImageRight }) => {
           <img 
             src={image} 
             alt={`Phase ${phase}`}
-            className="w-full h-auto"
+            className="w-full "
           />
         </div>
       </div>
