@@ -4,7 +4,7 @@ import Button from '../ui/Button';
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen w-full flex items-center justify-center">
+        <section className="relative min-h-screen w-full flex items-center">
             {/* Background Layer */}
             <div className="absolute inset-0 z-0">
                 <img 
@@ -24,29 +24,31 @@ const HeroSection = () => {
             </div>
 
             {/* Content Layer */}
-            <div className="relative z-20 max-w-[1200px] mx-auto px-4 text-center">
-                <Text 
-                    as="h1" 
-                    className="font-['Zen_Dots'] text-white text-4xl md:text-6xl lg:text-7xl leading-tight mb-6"
-                >
-                    Generate with AI,<br />
-                    Scan, Mint, Sell<br />
-                    & Trade
-                </Text>
+            <div className=" relative z-50 !ml-8 container mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
+                <div className="flex flex-col gap-4 max-w-[600px]">
+                    <Text 
+                        as="h1" 
+                        className="font-['Zen_Dots'] text-white !text-3xl sm:!text-4xl md:!text-5xl !leading-tight"
+                    >
+                        Generate with AI,<br />
+                        Scan, Mint, Sell<br />
+                        & Trade
+                    </Text>
 
-                <Text 
-                    className="text-white/80 max-w-[600px] mx-auto mb-8 text-lg md:text-xl"
-                    weight="light"
-                >
-                    Explore 3dotlink, where Web3 meets cultural legacy, and AI breathes life into NFTs
-                </Text>
+                    <Text 
+                        className="!text-white/80 !mb-2.5 !text-base sm:!text-lg md:!text-xl lg:!text-2xl"
+                        weight="light"
+                    >
+                        Explore 3dotlink, where Web3 meets cultural legacy, and AI breathes life into NFTs
+                    </Text>
 
-                <Button 
-                    size="lg"
-                    className="px-8 py-3"
-                >
-                    Buy NFT'S
-                </Button>
+                    <Button 
+                        size="md"
+                        className="!text-lg !px-8 !py-3 !w-fit hover:bg-[#FD1640] hover:bg-opacity-90"
+                    >
+                        Buy NFTs
+                    </Button>
+                </div>
             </div>
         </section>
     );

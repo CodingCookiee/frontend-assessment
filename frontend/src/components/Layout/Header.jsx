@@ -70,7 +70,7 @@ const Header = () => {
     <div
       ref={navContainerRef}
       className={`fixed inset-x-0 top-4 z-50 h-[100px] border-none transition-all duration-700 sm:inset-x-6 ${
-        isScrolled ? 'bg-black/20 backdrop-blur-md' : 'bg-transparent'
+        isScrolled ? '' : 'bg-transparent'
       } rounded-lg`}
     >
       <header className="relative w-full font-inter">
