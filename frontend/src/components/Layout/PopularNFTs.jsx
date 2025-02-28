@@ -74,7 +74,7 @@ const PopularNFTs = () => {
             <img 
               src={popularNFTs.center.image} 
               alt="Center NFT" 
-              className="w-full h-full object-cover"
+              className="w-full h-[70%] object-cover"
             />
           </motion.div>
           
@@ -110,7 +110,7 @@ const PopularNFTs = () => {
             <img 
               src={popularNFTs.thirdRow[0].image} 
               alt="NFT" 
-              className="w-full h-auto object-cover"
+              className="w-full  object-cover"
             />
           </motion.div>
           
@@ -118,7 +118,7 @@ const PopularNFTs = () => {
             <img 
               src={popularNFTs.thirdRow[1].image} 
               alt="NFT" 
-              className="w-full h-auto object-cover"
+              className="w-full  object-cover"
             />
           </motion.div>
         </motion.div>
