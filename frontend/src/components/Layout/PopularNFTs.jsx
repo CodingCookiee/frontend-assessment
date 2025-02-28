@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from 'framer-motion';
 import { popularNFTs } from '../../constants';
@@ -71,11 +70,11 @@ const PopularNFTs = () => {
           </motion.div>
           
           {/* Row 1: Center Image */}
-          <motion.div variants={fadeInUp}>
+          <motion.div variants={fadeInUp} className="row-span-2">
             <img 
               src={popularNFTs.center.image} 
               alt="Center NFT" 
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-cover"
             />
           </motion.div>
           
@@ -97,15 +96,6 @@ const PopularNFTs = () => {
             />
           </motion.div>
           
-          {/* Row 2: Center Image */}
-          <motion.div variants={fadeInUp}>
-            <img 
-              src={popularNFTs.center.image} 
-              alt="Center NFT" 
-              className="w-full h-auto object-cover"
-            />
-          </motion.div>
-          
           {/* Row 2-3: Stretched Image */}
           <motion.div variants={fadeInUp} className="row-span-2">
             <img 
@@ -115,7 +105,7 @@ const PopularNFTs = () => {
             />
           </motion.div>
 
-          {/* Row 3: First Image */}
+          {/* Row 3: First and Second Images */}
           <motion.div variants={fadeInUp}>
             <img 
               src={popularNFTs.thirdRow[0].image} 
@@ -124,7 +114,6 @@ const PopularNFTs = () => {
             />
           </motion.div>
           
-          {/* Row 3: Second Image */}
           <motion.div variants={fadeInUp}>
             <img 
               src={popularNFTs.thirdRow[1].image} 
