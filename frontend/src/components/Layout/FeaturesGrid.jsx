@@ -41,23 +41,23 @@ const FeaturesGrid = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full">
-        <div className="container mx-auto px-4">
+      <div className="relative z-10 w-full flex flex-col items-center">
+        <div className="container mx-auto px-4 flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-16 flex flex-col items-center"
           >
             <Text 
               as="h2"
-              className="font-['Zen_Dots'] !text-white !text-4xl md:!text-5xl lg:!text-6xl !mb-6 !mt-5"
+              className="font-['Zen_Dots'] !text-white !text-4xl md:!text-5xl lg:!text-6xl !mb-6 !mt-5 text-center"
             >
               Our Features
             </Text>
             <Text 
-              className="!text-white/80 !max-w-2xl mx-auto !text-lg md:!text-xl !mb-6"
+              className="!text-white/80 !max-w-2xl mx-auto !text-lg md:!text-xl !mb-6 text-center"
               weight="light"
             >
               Discover the unique features that make our platform stand out
@@ -69,13 +69,13 @@ const FeaturesGrid = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-[1200px] mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-[1200px] mx-auto place-items-center"
           >
             {features.map((feature) => (
               <motion.div 
                 key={feature.id} 
                 variants={item}
-                className="w-full max-w-[400px] mx-auto"
+                className="w-full max-w-[400px]"
               >
                 <FeatureCard 
                   title={feature.title}
