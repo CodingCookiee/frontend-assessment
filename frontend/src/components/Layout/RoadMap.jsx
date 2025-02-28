@@ -15,12 +15,12 @@ const RoadMap = () => {
                 className="text-center mb-16"
             >
                 <h2 
-                    className="text-5xl mb-4 font-['ZenDots']" 
+                    className="!text-5xl !mb-4 font-['Zen_Dots'] !mt-8 " 
                     style={{ color: '#FD1640' }}
                 >
                     Roadmap
                 </h2>
-                <p className="text-xl text-gray-300">
+                <p className="!text-xl text-gray-300  !mb-5">
                     Guiding the fusion of culture, AI, and Web3 innovation
                 </p>
             </motion.div>
