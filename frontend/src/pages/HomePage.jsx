@@ -3,13 +3,15 @@ import { Header, FeaturesGrid, Hero, PopularNFTs, RoadMap, FAQ } from '../compon
 
 const HomePage = () => {
     return (
-        <div>
+        <div className="min-h-screen ">
             <Header />
-            <Hero />
-            <FeaturesGrid />
-            <PopularNFTs />
-            <RoadMap />
-            <FAQ />
+            <div className="pt-24">
+                <Hero />
+                <FeaturesGrid />
+                <PopularNFTs />
+                <RoadMap />
+                <FAQ />
+            </div>
         </div>
     );
 }
