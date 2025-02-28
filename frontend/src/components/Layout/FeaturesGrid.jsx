@@ -29,7 +29,7 @@ const item = {
 
 const FeaturesGrid = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center">
+    <section className="relative w-full min-h-screen flex items-center justify-center !mt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 

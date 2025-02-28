@@ -28,7 +28,7 @@ const staggerContainer = {
 
 const PopularNFTs = () => {
   return (
-    <section className="relative w-full min-h-screen py-20 flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-screen py-20 flex flex-col items-center justify-center overflow-hidden !mt-20">
       <div className="w-full max-w-[1400px] mx-auto px-4 flex flex-col items-center">
         {/* Header Content */}
         <motion.div

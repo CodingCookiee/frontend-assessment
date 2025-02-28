@@ -6,7 +6,7 @@ import Text from '../ui/Text';
 
 const RoadMap = () => {
     return (
-        <section className="w-full py-8 md:py-16 mt-16 md:mt-32">
+        <section className="w-full py-8 md:py-16 !mt-20 !md:mt-32">
             <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
