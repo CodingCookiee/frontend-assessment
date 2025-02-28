@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
 import { popularNFTs } from '../../constants';
 import Text from '../ui/Text';
@@ -69,31 +69,13 @@ const PopularNFTs = () => {
             />
           </motion.div>
           
-          {/* Row 1: Center Image */}
-          <motion.div variants={fadeInUp} className="row-span-2">
-            <img 
-              src={popularNFTs.center.image} 
-              alt="Center NFT" 
-              className="w-full h-[70vh] object-cover"
-            />
-          </motion.div>
-          
-          {/* Row 1: Second Image */}
-          <motion.div variants={fadeInUp}>
-            <img 
-              src={popularNFTs.firstRow[1].image} 
-              alt="NFT" 
-              className="w-full h-[200px] object-cover"
-            />
-          </motion.div>
-
-          {/* Row 2: First Image and Third Row First Image */}
+          {/* Center Column */}
           <div className="flex flex-col gap-3">
             <motion.div variants={fadeInUp}>
               <img 
-                src={popularNFTs.secondRow[0].image} 
-                alt="NFT" 
-                className="w-full h-auto object-cover"
+                src={popularNFTs.center.image} 
+                alt="Center NFT" 
+                className="w-full h-[70vh] object-cover"
               />
             </motion.div>
             <motion.div variants={fadeInUp}>
@@ -105,23 +87,41 @@ const PopularNFTs = () => {
             </motion.div>
           </div>
           
-          {/* Row 2-3: Second Images */}
-          <div className="col-start-3 flex flex-col gap-3">
-            <motion.div variants={fadeInUp}>
-              <img 
-                src={popularNFTs.secondRow[1].image} 
-                alt="NFT" 
-                className="w-full h-[200px] object-cover"
-              />
-            </motion.div>
-            <motion.div variants={fadeInUp}>
-              <img 
-                src={popularNFTs.thirdRow[1].image} 
-                alt="NFT" 
-                className="w-full h-[200px] object-cover"
-              />
-            </motion.div>
-          </div>
+          {/* Row 1: Second Image */}
+          <motion.div variants={fadeInUp}>
+            <img 
+              src={popularNFTs.firstRow[1].image} 
+              alt="NFT" 
+              className="w-full h-[200px] object-cover"
+            />
+          </motion.div>
+
+          {/* Row 2: First Image */}
+          <motion.div variants={fadeInUp}>
+            <img 
+              src={popularNFTs.secondRow[0].image} 
+              alt="NFT" 
+              className="w-full h-auto object-cover"
+            />
+          </motion.div>
+          
+          {/* Row 2: Second Image */}
+          <motion.div variants={fadeInUp} className="col-start-3">
+            <img 
+              src={popularNFTs.secondRow[1].image} 
+              alt="NFT" 
+              className="w-full h-[200px] object-cover"
+            />
+          </motion.div>
+
+          {/* Row 3: Second Image */}
+          <motion.div variants={fadeInUp} className="col-start-3">
+            <img 
+              src={popularNFTs.thirdRow[1].image} 
+              alt="NFT" 
+              className="w-full h-[200px] object-cover"
+            />
+          </motion.div>
         </motion.div>
       </div>
     </section>
