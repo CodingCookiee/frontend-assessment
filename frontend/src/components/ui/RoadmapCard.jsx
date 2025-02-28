@@ -44,7 +44,7 @@ const RoadmapCard = ({ phase, title, list, image, isImageRight }) => {
           <img 
             src={image} 
             alt={`Phase ${phase}`} 
-            className="w-full absolute !-bottom-24" 
+            className="w-[80%] absolute !-bottom-20 bg-transparent" 
           />
         </div>
       </div>
