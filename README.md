@@ -12,7 +12,7 @@
 
 [View Live Demo](https://nftmarketplace-jade.vercel.app/)
 
-![App Screenshot](./public/app.png)
+![App Screenshot](./frontend/public/app.png)
 
 ## <a name="features">📱 Features</a>
 
@@ -43,7 +43,7 @@ Development Tools:
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/CodingCookiee/frontend-assessment)
 cd frontend
 ```
 
