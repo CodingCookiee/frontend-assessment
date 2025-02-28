@@ -4,13 +4,17 @@ import { navLinks } from "../../constants/index.js";
 import { Volume2, VolumeX } from "lucide-react";
 import { scrollToSection } from "../../utils/Scroll";
 import Button from "../ui/Button";
+import { useWindowScroll } from "react-use";
+
 
 const Header = () => {
+  const { y: scrollY } = useWindowScroll();
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
 
   const navContainerRef = useRef(null);
   const mobileMenuRef = useRef(null);
@@ -18,6 +22,35 @@ const Header = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  
+  useEffect(() => {
+    // Early return for mobile menu
+    if (isMobileMenuOpen) {
+      setIsNavVisible(true);
+      return;
+    }
+
+    // Track if page is scrolled for styling
+    setIsScrolled(scrollY > 0);
+
+    // Handle scroll behavior based on position
+    if (scrollY === 0) {
+      // At the top of the page: always show navbar
+      setIsNavVisible(true);
+     
+    } else if (scrollY > lastScrollY + 10) {
+      // Scrolling down: hide navbar (added threshold to prevent jitter)
+      setIsNavVisible(false);
+     
+    } else if (scrollY < lastScrollY - 10) {
+      // Scrolling up: show navbar (added threshold to prevent jitter)
+      setIsNavVisible(true);
+    
+    }
+    
+    // Update last scroll position
+    setLastScrollY(scrollY);
+  }, [scrollY, isMobileMenuOpen, lastScrollY]);
 
   // Mobile menu animation
   useEffect(() => {
@@ -30,30 +63,13 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      setIsScrolled(currentScroll > 0);
-
-      if (currentScroll === 0) {
-        setIsNavVisible(true);
-      } else if (currentScroll > lastScrollY) {
-        setIsNavVisible(false);
-      } else {
-        setIsNavVisible(true);
-      }
-      setLastScrollY(currentScroll);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
-
-  useEffect(() => {
     if (navContainerRef.current) {
       gsap.to(navContainerRef.current, {
         y: isNavVisible ? 0 : -100,
         opacity: isNavVisible ? 1 : 0,
-        duration: 0.2,
+        duration: 0.3, 
+        ease: "power2.out", 
+        overwrite: true,
       });
     }
   }, [isNavVisible]);
@@ -69,7 +85,7 @@ const Header = () => {
   return (
     <div
       ref={navContainerRef}
-      className={`fixed inset-x-0 top-4 z-50 h-[100px] border-none transition-all duration-700 sm:inset-x-6 ${
+      className={`fixed inset-x-0 top-4 z-100 h-[100px] border-none transition-all duration-700 sm:inset-x-6 ${
         isScrolled ? '' : 'bg-transparent'
       } rounded-lg`}
     >
