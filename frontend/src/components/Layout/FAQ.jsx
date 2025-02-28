@@ -76,12 +76,12 @@ const FAQ = () => {
                     </div>
 
                     {/* Right Section - Image */}
-                    <div className="w-full  lg:absolute lg:right-0 lg:top-0 lg:bottom-0 ">
-                        <div className="relative w-full h-full">
+                    <div className="w-full  lg:absolute lg:-right-10 lg:top-0 lg:bottom-0 ">
+                        <div className="relative !w-full !h-full">
                             <img 
                                 src="/images/popular/faq-image.png" 
                                 alt="FAQ Illustration" 
-                                className="w-full h-full !object-cover  lg:origin-left"
+                                className="!w-full !h-full !object-cover  lg:origin-left"
                             />
                             {/* Gradient overlay for better text readability on mobile */}
                             <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent lg:hidden" />
